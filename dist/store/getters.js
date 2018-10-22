@@ -1,0 +1,1 @@
+export const proxy = state => state.proxy;

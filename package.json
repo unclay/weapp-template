@@ -1,0 +1,22 @@
+{
+  "name": "weapp-template",
+  "version": "0.0.1",
+  "keywords": [
+    "weapp",
+    "template"
+  ],
+  "description": "小程序开发模版",
+  "author": "Clay <wcl58981298@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "regenerator": "^0.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unclay/weapp-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unclay/weapp-template/issues"
+  },
+  "homepage": "https://github.com/unclay/weapp-template#readme"
+}
