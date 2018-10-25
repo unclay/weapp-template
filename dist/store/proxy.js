@@ -4,7 +4,7 @@
 import store from './index';
 const nativePage = Page
 const nativeComponent = Component
-Page = (options, type = 'onLoad') => {
+const StoreProxyPage = Page = (options, type = 'onLoad') => {
   // 从store读取数据
   const getters = (scope) => {
     if (options.getters) {
@@ -36,4 +36,4 @@ Page = (options, type = 'onLoad') => {
   }
   type === 'onLoad' ? nativePage(options) : nativeComponent(options)
 }
-Component = options => Page(options, 'created')
+Component = options => StoreProxyPage(options, 'created')

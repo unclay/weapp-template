@@ -1,6 +1,6 @@
 const nativePage = Page
 const nativeComponent = Component
-Page = (options, key = 'onLoad') => {
+const ProxyPage = Page = (options, key = 'onLoad') => {
   const native = options[key]
   options[key] = function () {
     this.ctx = proxy.call(this)
@@ -8,7 +8,7 @@ Page = (options, key = 'onLoad') => {
   }
   key === 'onLoad' ? nativePage(options) : nativeComponent(options)
 }
-Component = options => Page(options, 'created')
+Component = options => ProxyPage(options, 'created')
 
 function proxy() {
   let pending = false
